@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred Buddha Prayer - Enhanced Meditation Experience</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gold: #FFD700;
+            --secondary-gold: #FFA500;
+            --deep-blue: #1e3c72;
+            --light-blue: #2a5298;
+            --purple: #f093fb;
+            --white-alpha: rgba(255, 255, 255, 0.1);
+            --border-glow: rgba(255, 215, 0, 0.5);
+            --shadow-dark: rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--light-blue) 30%, #667eea 60%, var(--purple) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+            background-attachment: fixed;
+        }
+
+        /* Advanced Background Effects */
+        .cosmic-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(173, 216, 230, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 182, 193, 0.05) 0%, transparent 50%);
+            z-index: -1;
+            animation: cosmic-drift 60s ease-in-out infinite;
+        }
+
+        @keyframes cosmic-drift {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+            50% { transform: scale(1.1) rotate(180deg); opacity: 1; }
+        }
+
+        /* Enhanced Particles */
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 215, 0, 0.3));
+            border-radius: 50%;
+            animation: enhanced-float 20s infinite linear;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        @keyframes enhanced-float {
+            0% {
+                transform: translateY(110vh) rotate(0deg) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+                transform: translateY(90vh) rotate(36deg) scale(1);
+            }
+            90% {
+                opacity: 1;
+                transform: translateY(-10vh) rotate(324deg) scale(1);
+            }
+            100% {
+                transform: translateY(-20vh) rotate(360deg) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Sacred Geometry Background */
+        .sacred-geometry {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            opacity: 0.03;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .geometry-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 50%;
+            animation: sacred-rotate 120s linear infinite;
+        }
+
+        .geometry-layer:nth-child(2) {
+            width: 70%;
+            height: 70%;
+            top: 15%;
+            left: 15%;
+            animation-duration: 90s;
+            animation-direction: reverse;
+        }
+
+        .geometry-layer:nth-child(3) {
+            width: 40%;
+            height: 40%;
+            top: 30%;
+            left: 30%;
+            animation-duration: 60s;
+        }
+
+        @keyframes sacred-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Enhanced Container */
+        .container {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+            max-width: 900px;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+
+        .title {
+            color: #fff;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1.5rem;
+            text-shadow: 
+                2px 2px 4px rgba(0,0,0,0.3),
+                0 0 20px rgba(255, 215, 0, 0.3);
+            animation: enhanced-glow 4s ease-in-out infinite alternate;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        @keyframes enhanced-glow {
+            from {
+                text-shadow: 
+                    2px 2px 4px rgba(0,0,0,0.3),
+                    0 0 20px rgba(255, 215, 0, 0.3),
+                    0 0 30px rgba(255, 255, 255, 0.1);
+            }
+            to {
+                text-shadow: 
+                    2px 2px 4px rgba(0,0,0,0.3),
+                    0 0 30px rgba(255, 215, 0, 0.6),
+                    0 0 50px rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        /* Enhanced Buddha Container */
+        .buddha-container {
+            position: relative;
+            display: inline-block;
+            margin: 2rem 0;
+        }
+
+        .buddha-image {
+            width: clamp(250px, 40vw, 350px);
+            height: clamp(250px, 40vw, 350px);
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--primary-gold);
+            box-shadow: 
+                0 0 40px var(--border-glow),
+                0 0 80px rgba(255, 215, 0, 0.3),
+                0 0 120px rgba(255, 215, 0, 0.1),
+                inset 0 0 30px rgba(255, 255, 255, 0.1);
+            animation: enhanced-breathe 6s ease-in-out infinite;
+            transition: all 0.5s ease;
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .buddha-image:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 0 60px var(--border-glow),
+                0 0 120px rgba(255, 215, 0, 0.5),
+                0 0 180px rgba(255, 215, 0, 0.2);
+        }
+
+        @keyframes enhanced-breathe {
+            0%, 100% {
+                box-shadow: 
+                    0 0 40px var(--border-glow),
+                    0 0 80px rgba(255, 215, 0, 0.3),
+                    0 0 120px rgba(255, 215, 0, 0.1),
+                    inset 0 0 30px rgba(255, 255, 255, 0.1);
+            }
+            50% {
+                box-shadow: 
+                    0 0 60px rgba(255, 215, 0, 0.8),
+                    0 0 120px rgba(255, 215, 0, 0.5),
+                    0 0 180px rgba(255, 215, 0, 0.2),
+                    inset 0 0 40px rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        .lotus-decoration {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.5rem;
+            color: rgba(255, 182, 193, 0.9);
+            animation: lotus-bloom 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 182, 193, 0.5));
+        }
+
+        @keyframes lotus-bloom {
+            0%, 100% { 
+                transform: translateX(-50%) translateY(0px) rotate(0deg) scale(1);
+            }
+            25% { 
+                transform: translateX(-50%) translateY(-5px) rotate(2deg) scale(1.1);
+            }
+            50% { 
+                transform: translateX(-50%) translateY(-10px) rotate(-2deg) scale(1.05);
+            }
+            75% { 
+                transform: translateX(-50%) translateY(-5px) rotate(2deg) scale(1.1);
+            }
+        }
+
+        /* Enhanced Prayer Text */
+        .prayer-text {
+            color: rgba(255, 255, 255, 0.95);
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            line-height: 2;
+            margin: 2.5rem 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-style: italic;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Enhanced Mantra */
+        .mantra {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 25px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            color: #fff;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mantra::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            animation: mantra-shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes mantra-shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* Enhanced Candles */
+        .candles-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .candle {
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+        }
+
+        .candle:hover {
+            transform: scale(1.15) rotateY(10deg);
+        }
+
+        .candle-body {
+            width: 24px;
+            height: 70px;
+            background: linear-gradient(45deg, #ffd700 0%, #ffa500 50%, #ff8c00 100%);
+            border-radius: 12px 12px 6px 6px;
+            box-shadow: 
+                0 4px 15px rgba(0,0,0,0.3),
+                inset -2px 0 5px rgba(0,0,0,0.2),
+                inset 2px 0 5px rgba(255,255,255,0.2);
+            position: relative;
+        }
+
+        .candle-body::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 8px;
+            background: #8B4513;
+            border-radius: 1px;
+        }
+
+        .candle-flame {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 22px;
+            background: radial-gradient(ellipse at center, #ffff99 0%, #ff9933 40%, #ff6600 70%, #cc3300 100%);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: enhanced-flicker 2s ease-in-out infinite alternate;
+            opacity: 0;
+            transition: opacity 0.7s ease;
+            filter: blur(0.5px);
+        }
+
+        .candle-flame.lit {
+            opacity: 1;
+        }
+
+        @keyframes enhanced-flicker {
+            0% {
+                transform: translateX(-50%) rotate(-2deg) scale(0.95);
+                box-shadow: 0 0 25px #ff6600, 0 0 35px #ff3300;
+            }
+            25% {
+                transform: translateX(-50%) rotate(1deg) scale(1.05);
+                box-shadow: 0 0 30px #ff6600, 0 0 45px #ff3300, 0 0 55px #ff9900;
+            }
+            75% {
+                transform: translateX(-50%) rotate(-1deg) scale(1.02);
+                box-shadow: 0 0 35px #ff6600, 0 0 50px #ff3300;
+            }
+            100% {
+                transform: translateX(-50%) rotate(2deg) scale(0.98);
+                box-shadow: 0 0 20px #ff6600, 0 0 30px #ff3300;
+            }
+        }
+
+        /* Enhanced Offerings */
+        .offerings-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 25px;
+            margin: 2rem 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .offering {
+            cursor: pointer;
+            font-size: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0.8;
+            padding: 15px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1;
+        }
+
+        .offering:hover {
+            transform: scale(1.3) rotate(10deg);
+            opacity: 1;
+            background: rgba(255, 215, 0, 0.1);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .offering.offered {
+            animation: enhanced-float-up 3s ease-out forwards;
+        }
+
+        @keyframes enhanced-float-up {
+            0% {
+                transform: translateY(0) scale(1) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-50px) scale(1.5) rotate(180deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-150px) scale(2) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Enhanced Buttons */
+        .btn {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 30%, #ffd6cc 70%, #ff9a9e 100%);
+            border: none;
+            border-radius: 30px;
+            color: #333;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            font-weight: 600;
+            padding: 15px 25px;
+            margin: 8px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 
+                0 6px 20px rgba(0,0,0,0.15),
+                inset 0 1px 0 rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 
+                0 10px 30px rgba(0,0,0,0.25),
+                inset 0 1px 0 rgba(255,255,255,0.4);
+            background: linear-gradient(135deg, #fecfef 0%, #ff9a9e 30%, #ffa8a8 70%, #fecfef 100%);
+        }
+
+        .btn:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        /* Enhanced Mala Counter */
+        .mala-counter {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 255, 255, 0.05));
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .mala-beads {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 4px;
+            margin: 1rem 0;
+            max-height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .mala-bead {
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(45deg, #8B4513, #A0522D);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            cursor: pointer;
+        }
+
+        .mala-bead:hover {
+            transform: scale(1.2);
+        }
+
+        .mala-bead.counted {
+            background: linear-gradient(45deg, var(--primary-gold), var(--secondary-gold));
+            box-shadow: 0 0 8px var(--primary-gold), 0 2px 4px rgba(0,0,0,0.2);
+            transform: scale(1.1);
+        }
+
+        /* Enhanced Merit System */
+        .merit-meter {
+            position: fixed;
+            top: 120px;
+            right: 20px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 255, 255, 0.1));
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            color: #fff;
+            text-align: center;
+            width: 180px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .merit-bar {
+            width: 100%;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 1rem 0;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .merit-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-gold), var(--secondary-gold), #ff6b6b);
+            width: 0%;
+            transition: width 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 6px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+            position: relative;
+        }
+
+        .merit-fill::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: merit-shine 2s ease-in-out infinite;
+        }
+
+        @keyframes merit-shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Enhanced Interactive Elements */
+        .dharma-wheel {
+            position: fixed;
+            top: 50%;
+            left: 60px;
+            transform: translateY(-50%);
+            width: 90px;
+            height: 90px;
+            background: radial-gradient(circle, var(--primary-gold) 20%, var(--secondary-gold) 60%, #DAA520 100%);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            box-shadow: 
+                0 6px 20px rgba(0,0,0,0.3),
+                inset 0 2px 5px rgba(255,255,255,0.3),
+                inset 0 -2px 5px rgba(0,0,0,0.2);
+            border: 3px solid #B8860B;
+        }
+
+        .dharma-wheel:hover {
+            transform: translateY(-50%) scale(1.15);
+            box-shadow: 
+                0 10px 30px rgba(0,0,0,0.4),
+                0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .dharma-wheel.spinning {
+            animation: enhanced-dharma-spin 4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes enhanced-dharma-spin {
+            0% { transform: translateY(-50%) rotate(0deg) scale(1); }
+            50% { transform: translateY(-50%) rotate(540deg) scale(1.2); }
+            100% { transform: translateY(-50%) rotate(1080deg) scale(1); }
+        }
+
+        /* Sacred Mandala Enhancement */
+        .mandala-container {
+            position: fixed;
+            top: 50%;
+            right: 60px;
+            transform: translateY(-50%);
+            width: 120px;
+            height: 120px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .mandala-container:hover {
+            transform: translateY(-50%) scale(1.15);
+        }
+
+        .mandala {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, 
+                #FF6B6B 0deg 60deg,
+                #4ECDC4 60deg 120deg,
+                #45B7D1 120deg 180deg,
+                #96CEB4 180deg 240deg,
+                #FFEAA7 240deg 300deg,
+                #DDA0DD 300deg 360deg);
+            animation: enhanced-mandala-rotate 45s linear infinite;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            box-shadow: 
+                0 0 30px rgba(255, 255, 255, 0.2),
+                inset 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes enhanced-mandala-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .mandala::before {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+        }
+
+        .mandala::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,215,0,0.3) 0%, transparent 70%);
+        }
+
+        /* Enhanced Weather Effects */
+        .weather-effect {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 5;
+        }
+
+        .raindrop {
+            position: absolute;
+            width: 2px;
+            height: 25px;
+            background: linear-gradient(to bottom, transparent, rgba(173, 216, 230, 0.6), rgba(255,255,255,0.3));
+            animation: enhanced-rain-fall 1.5s linear infinite;
+            border-radius: 0 0 2px 2px;
+        }
+
+        @keyframes enhanced-rain-fall {
+            0% {
+                transform: translateY(-100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) translateX(10px);
+                opacity: 0;
+            }
+        }
+
+        /* Enhanced Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+                margin: 1rem;
+            }
+            
+            .dharma-wheel,
+            .mandala-container {
+                position: relative;
+                transform: none;
+                margin: 1rem;
+            }
+            
+            .merit-meter {
+                position: relative;
+                width: 100%;
+                margin: 1rem 0;
+            }
+            
+            .offerings-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .candles-container {
+                gap: 20px;
+            }
+            
+            .fullscreen-controls {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .fullscreen-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-height: 600px) {
+            .container {
+                padding: 0.5rem;
+            }
+            
+            .title {
+                font-size: 1.8rem;
+                margin-bottom: 1rem;
+            }
+            
+            .buddha-image {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .meditation-controls {
+                gap: 8px;
+            }
+            
+            .btn {
+                padding: 10px 15px;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Meditation Mode */
+        .meditation-mode {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+        }
+
+        .meditation-mode .cosmic-background {
+            opacity: 0.3;
+        }
+
+        /* Breathing Guide Enhancement */
+        .breathing-guide {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            border: 4px solid rgba(173, 216, 230, 0.5);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+            z-index: 15;
+        }
+
+        .breathing-guide.active {
+            opacity: 1;
+            animation: enhanced-breathe-guide 8s ease-in-out infinite;
+        }
+
+        @keyframes enhanced-breathe-guide {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                border-color: rgba(173, 216, 230, 0.5);
+                box-shadow: 0 0 20px rgba(173, 216, 230, 0.3);
+            }
+            25% {
+                transform: translate(-50%, -50%) scale(1.8);
+                border-color: rgba(173, 216, 230, 0.8);
+                box-shadow: 0 0 40px rgba(173, 216, 230, 0.6);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.8);
+                border-color: rgba(173, 216, 230, 0.8);
+                box-shadow: 0 0 40px rgba(173, 216, 230, 0.6);
+            }
+            75% {
+                transform: translate(-50%, -50%) scale(1);
+                border-color: rgba(173, 216, 230, 0.5);
+                box-shadow: 0 0 20px rgba(173, 216, 230, 0.3);
+            }
+        }
+
+        /* Sound Visualization */
+        .sound-waves {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 100px;
+            height: 60px;
+            display: flex;
+            align-items: end;
+            gap: 3px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .sound-waves.active {
+            opacity: 1;
+        }
+
+        .wave-bar {
+            width: 4px;
+            background: linear-gradient(to top, var(--primary-gold), var(--secondary-gold));
+            border-radius: 2px;
+            animation: wave-pulse 1s ease-in-out infinite;
+        }
+
+        .wave-bar:nth-child(1) { animation-delay: 0s; }
+        .wave-bar:nth-child(2) { animation-delay: 0.1s; }
+        .wave-bar:nth-child(3) { animation-delay: 0.2s; }
+        .wave-bar:nth-child(4) { animation-delay: 0.3s; }
+        .wave-bar:nth-child(5) { animation-delay: 0.4s; }
+
+        @keyframes wave-pulse {
+            0%, 100% { height: 10px; }
+            50% { height: 40px; }
+        }
+
+        /* Notification Enhancement */
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 215, 0, 0.1));
+            color: #333;
+            padding: 15px 30px;
+            border-radius: 30px;
+            box-shadow: 
+                0 10px 30px rgba(0,0,0,0.2),
+                0 0 20px rgba(255, 215, 0, 0.3);
+            z-index: 1000;
+            font-weight: 600;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            animation: enhanced-slide-down 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes enhanced-slide-down {
+            from {
+                transform: translateX(-50%) translateY(-100px) scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(-50%) translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-lotus {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            animation: lotus-spin 2s ease-in-out infinite;
+            z-index: 1000;
+            opacity: 0;
+        }
+
+        .loading-lotus.active {
+            opacity: 1;
+        }
+
+        @keyframes lotus-spin {
+            0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+            50% { transform: translate(-50%, -50%) scale(1.2) rotate(180deg); }
+        }
+
+        /* Fullscreen Controls */
+        .fullscreen-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+        }
+
+        .fullscreen-btn {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 215, 0, 0.1));
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 15px;
+            color: #fff;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .fullscreen-btn:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 215, 0, 0.2));
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .fullscreen-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Fullscreen mode adjustments */
+        :fullscreen {
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--light-blue) 30%, #667eea 60%, var(--purple) 100%);
+        }
+
+        :-webkit-full-screen {
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--light-blue) 30%, #667eea 60%, var(--purple) 100%);
+        }
+
+        :-moz-full-screen {
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--light-blue) 30%, #667eea 60%, var(--purple) 100%);
+        }
+
+        :-ms-fullscreen {
+            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--light-blue) 30%, #667eea 60%, var(--purple) 100%);
+        }
+
+        /* Fullscreen enhancements */
+        :fullscreen .container {
+            max-width: 95vw;
+            padding: 1.5rem;
+        }
+
+        :fullscreen .title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 2rem;
+        }
+
+        :fullscreen .buddha-image {
+            width: clamp(300px, 45vw, 400px);
+            height: clamp(300px, 45vw, 400px);
+        }
+
+        /* Hide scrollbars in fullscreen */
+        :fullscreen {
+            overflow: hidden;
+        }
+
+        :fullscreen body {
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        /* Fullscreen notification */
+        .fullscreen-info {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            z-index: 1002;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .fullscreen-info.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cosmic Background -->
+    <div class="cosmic-background"></div>
+    
+    <!-- Sacred Geometry -->
+    <div class="sacred-geometry">
+        <div class="geometry-layer"></div>
+        <div class="geometry-layer"></div>
+        <div class="geometry-layer"></div>
+    </div>
+
+    <!-- Loading Animation -->
+    <div class="loading-lotus" id="loading-lotus">🪷</div>
+
+    <!-- Weather Effect -->
+    <div class="weather-effect" id="weather-effect"></div>
+
+    <!-- Breathing Guide -->
+    <div class="breathing-guide" id="breathing-guide"></div>
+
+    <!-- Sound Waves Visualization -->
+    <div class="sound-waves" id="sound-waves">
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+    </div>
+
+    <!-- Dharma Wheel -->
+    <div class="dharma-wheel" onclick="spinDharmaWheel()" title="Spin the Wheel of Dharma">☸</div>
+
+    <!-- Sacred Mandala -->
+    <div class="mandala-container" onclick="activateMandala()" title="Sacred Mandala Meditation">
+        <div class="mandala">ॐ</div>
+    </div>
+
+    <!-- Merit System -->
+    <div class="merit-meter">
+        <div style="font-size: 1.1rem; margin-bottom: 0.5rem;">🏆 Merit</div>
+        <div style="font-size: 1.5rem; color: var(--primary-gold);"><span id="merit-points">0</span></div>
+        <div class="merit-bar">
+            <div class="merit-fill" id="merit-fill"></div>
+        </div>
+        <div style="font-size: 0.9rem; margin-top: 0.5rem;">
+            Level: <span id="merit-level">Seeker</span>
+        </div>
+        <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.3rem;">
+            Next: <span id="next-level">Devoted</span>
+        </div>
+    </div>
+
+    <!-- Fullscreen Controls -->
+    <div class="fullscreen-controls">
+        <button class="fullscreen-btn" id="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
+            <span id="fullscreen-icon">⛶</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <h1 class="title">🙏 Sacred Buddha Prayer 🙏</h1>
+        
+        <!-- Enhanced Candles -->
+        <div class="candles-container">
+            <div class="candle" onclick="toggleCandle(0)" title="Light of Wisdom">
+                <div class="candle-body"></div>
+                <div class="candle-flame" id="flame-0"></div>
+            </div>
+            <div class="candle" onclick="toggleCandle(1)" title="Light of Compassion">
+                <div class="candle-body"></div>
+                <div class="candle-flame" id="flame-1"></div>
+            </div>
+            <div class="candle" onclick="toggleCandle(2)" title="Light of Peace">
+                <div class="candle-body"></div>
+                <div class="candle-flame" id="flame-2"></div>
+            </div>
+            <div class="candle" onclick="toggleCandle(3)" title="Light of Love">
+                <div class="candle-body"></div>
+                <div class="candle-flame" id="flame-3"></div>
+            </div>
+            <div class="candle" onclick="toggleCandle(4)" title="Light of Understanding">
+                <div class="candle-body"></div>
+                <div class="candle-flame" id="flame-4"></div>
+            </div>
+        </div>
+        
+        <div class="buddha-container">
+            <div class="lotus-decoration">🪷</div>
+            <img src="https://cdn.pixabay.com/photo/2023/06/21/06/51/buddha-8078670_1280.jpg" 
+                 alt="Buddha Statue" 
+                 class="buddha-image"
+                 onclick="blessBuddha()">
+        </div>
+        
+        <!-- Enhanced Offerings -->
+        <div class="offerings-container">
+            <div class="offering" onclick="makeOffering('🌸', 'Flowers of Devotion')" title="Offer Flowers">🌸</div>
+            <div class="offering" onclick="makeOffering('🍎', 'Fruits of Gratitude')" title="Offer Fruit">🍎</div>
+            <div class="offering" onclick="makeOffering('🕯️', 'Light of Reverence')" title="Offer Light">🕯️</div>
+            <div class="offering" onclick="makeOffering('💧', 'Water of Purity')" title="Offer Water">💧</div>
+            <div class="offering" onclick="makeOffering('🌾', 'Incense of Prayer')" title="Offer Incense">🌾</div>
+            <div class="offering" onclick="makeOffering('🪷', 'Sacred Lotus')" title="Offer Lotus">🪷</div>
+        </div>
+        
+        <div class="prayer-text">
+            "May all beings be happy and free from suffering.<br>
+            May all beings find peace and inner wisdom.<br>
+            May compassion guide our hearts and minds.<br>
+            May love and understanding illuminate our path."
+        </div>
+        
+        <div class="mantra">
+            <strong style="font-size: 1.3em;">Om Mani Padme Hum</strong><br>
+            <span style="font-size: 1.1em; color: var(--primary-gold);">ॐ मणिपद्मे हूँ</span><br>
+            <em style="opacity: 0.9;">"The jewel in the lotus" - Compassion and Wisdom</em>
+        </div>
+
+        <!-- Enhanced Mala Counter -->
+        <div class="mala-counter">
+            <div style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem; font-weight: 600;">
+                Prayer Count: <span id="prayer-count" style="color: var(--primary-gold);">0</span>/108
+            </div>
+            <div class="mala-beads" id="mala-beads"></div>
+            <div style="margin-top: 1rem; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+                <button class="btn" onclick="countPrayer()" style="padding: 10px 20px;">🙏 Count Prayer</button>
+                <button class="btn" onclick="resetMala()" style="padding: 10px 20px;">🔄 Reset Mala</button>
+            </div>
+        </div>
+        
+        <div class="meditation-controls" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 2rem;">
+            <button class="btn" onclick="startMeditation()">🧘‍♀️ Begin Meditation</button>
+            <button class="btn" onclick="playBell()">🔔 Ring Sacred Bell</button>
+            <button class="btn" onclick="showBlessing()">✨ Receive Blessing</button>
+            <button class="btn" onclick="lightAllCandles()">🕯️ Light All Candles</button>
+            <button class="btn" onclick="startBreathingExercise()">🫁 Breathing Guide</button>
+            <button class="btn" onclick="toggleWeather()">🌧️ Rain Meditation</button>
+            <button class="btn" onclick="toggleMeditationMode()">🌙 Meditation Mode</button>
+            <button class="btn" onclick="playOmChant()">🕉️ Om Chanting</button>
+            <button class="btn" onclick="toggleFullscreen()">🖥️ Toggle Fullscreen</button>
+        </div>
+    </div>
+
+    <!-- Fullscreen Info -->
+    <div class="fullscreen-info" id="fullscreen-info">
+        Press ESC or click the ⛶ button to exit fullscreen • Press SPACE to count prayers
+    </div>
+
+    <script>
+        // Enhanced Application State
+        const App = {
+            meritPoints: 0,
+            meritLevel: 'Seeker',
+            prayerCount: 0,
+            candleStates: [false, false, false, false, false],
+            isMediating: false,
+            breathingActive: false,
+            weatherActive: false,
+            meditationMode: false,
+            soundsActive: false,
+            isFullscreen: false,
+            
+            // Merit levels with enhanced progression
+            meritLevels: [
+                { threshold: 0, name: 'Seeker', next: 'Devoted', fillPercent: 0, color: '#4ECDC4' },
+                { threshold: 75, name: 'Devoted', next: 'Practitioner', fillPercent: 20, color: '#45B7D1' },
+                { threshold: 200, name: 'Practitioner', next: 'Wise One', fillPercent: 40, color: '#96CEB4' },
+                { threshold: 400, name: 'Wise One', next: 'Enlightened', fillPercent: 60, color: '#FFEAA7' },
+                { threshold: 750, name: 'Enlightened', next: 'Master', fillPercent: 80, color: '#DDA0DD' },
+                { threshold: 1500, name: 'Master', next: 'Buddha', fillPercent: 100, color: '#FFD700' }
+            ],
+            
+            wisdomQuotes: [
+                "The mind is everything. What you think you become. - Buddha",
+                "Peace comes from within. Do not seek it without. - Buddha",
+                "Three things cannot be long hidden: the sun, the moon, and the truth. - Buddha",
+                "Hatred does not cease by hatred, but only by love. - Buddha",
+                "Better than a thousand hollow words, is one word that brings peace. - Buddha",
+                "In the end, just three things matter: How well we have lived, How well we have loved, How well we have learned to let go. - Buddha",
+                "The root of suffering is resisting the certainty that uncertainty is all we truly have. - Buddha",
+                "You yourself, as much as anybody in the entire universe, deserve your love and affection. - Buddha",
+                "If you truly loved yourself, you could never hurt another. - Buddha",
+                "Every morning we are born again. What we do today is what matters most. - Buddha",
+                "Do not dwell in the past, do not dream of the future, concentrate the mind on the present moment. - Buddha",
+                "Health is the greatest gift, contentment the greatest wealth, faithfulness the best relationship. - Buddha"
+            ]
+        };
+
+        // Enhanced Initialization
+        function init() {
+            showLoading();
+            initializeMala();
+            createInitialParticles();
+            updateMeritDisplay();
+            setupFullscreenListeners();
+            
+            setTimeout(() => {
+                hideLoading();
+                showWelcomeMessage();
+                enterFullscreen(); // Enter fullscreen by default
+            }, 2000);
+        }
+
+        function showLoading() {
+            document.getElementById('loading-lotus').classList.add('active');
+        }
+
+        function hideLoading() {
+            document.getElementById('loading-lotus').classList.remove('active');
+        }
+
+        function showWelcomeMessage() {
+            showNotification('🙏 Welcome to Sacred Buddha Prayer - May peace be with you');
+        }
+
+        // Fullscreen Management
+        function setupFullscreenListeners() {
+            document.addEventListener('fullscreenchange', handleFullscreenChange);
+            document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+            document.addEventListener('mozfullscreenchange', handleFullscreenChange);
+            document.addEventListener('MSFullscreenChange', handleFullscreenChange);
+        }
+
+        function handleFullscreenChange() {
+            const isFullscreen = !!(document.fullscreenElement || 
+                                   document.webkitFullscreenElement || 
+                                   document.mozFullScreenElement || 
+                                   document.msFullscreenElement);
+            
+            App.isFullscreen = isFullscreen;
+            updateFullscreenButton();
+            
+            const fullscreenInfo = document.getElementById('fullscreen-info');
+            
+            if (isFullscreen) {
+                showNotification('🖥️ Fullscreen mode activated - Immersive meditation experience');
+                addMerit(3);
+                
+                // Show fullscreen info temporarily
+                setTimeout(() => {
+                    fullscreenInfo.classList.add('show');
+                    setTimeout(() => {
+                        fullscreenInfo.classList.remove('show');
+                    }, 4000);
+                }, 1000);
+            } else {
+                showNotification('🪟 Fullscreen mode deactivated - Window mode restored');
+                fullscreenInfo.classList.remove('show');
+            }
+        }
+
+        function updateFullscreenButton() {
+            const icon = document.getElementById('fullscreen-icon');
+            const btn = document.getElementById('fullscreen-btn');
+            
+            if (App.isFullscreen) {
+                icon.textContent = '⛶'; // Exit fullscreen icon
+                btn.title = 'Exit Fullscreen (ESC)';
+            } else {
+                icon.textContent = '⛶'; // Enter fullscreen icon
+                btn.title = 'Enter Fullscreen';
+            }
+        }
+
+        function enterFullscreen() {
+            const element = document.documentElement;
+            
+            // Check if already in fullscreen
+            if (App.isFullscreen) {
+                return;
+            }
+            
+            try {
+                if (element.requestFullscreen) {
+                    element.requestFullscreen().catch(err => {
+                        console.log('Fullscreen request failed:', err);
+                        if (err.name === 'NotAllowedError') {
+                            showNotification('⚠️ Please click anywhere to enable fullscreen mode');
+                            // Add one-time click handler for user gesture
+                            const handleClick = () => {
+                                enterFullscreen();
+                                document.removeEventListener('click', handleClick);
+                            };
+                            document.addEventListener('click', handleClick);
+                        } else {
+                            showNotification('⚠️ Fullscreen not supported or blocked by browser');
+                        }
+                    });
+                } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen();
+                } else if (element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen();
+                } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen();
+                } else {
+                    showNotification('⚠️ Fullscreen not supported in this browser');
+                }
+            } catch (err) {
+                console.log('Fullscreen error:', err);
+                showNotification('⚠️ Unable to enter fullscreen mode');
+            }
+        }
+
+        function exitFullscreen() {
+            try {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen().catch(err => {
+                        console.log('Exit fullscreen failed:', err);
+                    });
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            } catch (err) {
+                console.log('Exit fullscreen error:', err);
+            }
+        }
+
+        function toggleFullscreen() {
+            if (App.isFullscreen) {
+                exitFullscreen();
+            } else {
+                enterFullscreen();
+            }
+        }
+
+        // Keyboard shortcuts
+        function handleKeyboard(event) {
+            // ESC key to exit fullscreen
+            if (event.key === 'Escape' && App.isFullscreen) {
+                exitFullscreen();
+            }
+            // F11 key to toggle fullscreen
+            if (event.key === 'F11') {
+                event.preventDefault();
+                toggleFullscreen();
+            }
+            // Space bar to count prayer
+            if (event.key === ' ' && !event.target.matches('button, input, textarea')) {
+                event.preventDefault();
+                countPrayer();
+            }
+        }
+
+        // Add keyboard event listener
+        document.addEventListener('keydown', handleKeyboard);
+
+        // Enhanced Particle System
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + 'vw';
+            const size = Math.random() * 8 + 3;
+            particle.style.width = particle.style.height = size + 'px';
+            particle.style.animationDuration = (Math.random() * 15 + 15) + 's';
+            particle.style.animationDelay = Math.random() * 3 + 's';
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                if (particle.parentNode) particle.remove();
+            }, 25000);
+        }
+
+        function createInitialParticles() {
+            for (let i = 0; i < 15; i++) {
+                setTimeout(() => createParticle(), i * 300);
+            }
+        }
+
+        // Enhanced Candle Management
+        function toggleCandle(index) {
+            const flame = document.getElementById(`flame-${index}`);
+            App.candleStates[index] = !App.candleStates[index];
+            
+            if (App.candleStates[index]) {
+                flame.classList.add('lit');
+                addMerit(3);
+                activateSoundWaves(1000);
+                showNotification(`🕯️ ${getCandleName(index)} lit - illuminating your path`);
+            } else {
+                flame.classList.remove('lit');
+                showNotification(`🕯️ ${getCandleName(index)} extinguished - finding peace in darkness`);
+            }
+        }
+
+        function getCandleName(index) {
+            const names = ['Wisdom', 'Compassion', 'Peace', 'Love', 'Understanding'];
+            return names[index] || 'Sacred';
+        }
+
+        function lightAllCandles() {
+            for (let i = 0; i < 5; i++) {
+                const flame = document.getElementById(`flame-${i}`);
+                flame.classList.add('lit');
+                App.candleStates[i] = true;
+            }
+            addMerit(15);
+            activateSoundWaves(2000);
+            showNotification('🕯️ All sacred lights lit - divine illumination achieved');
+        }
+
+        // Enhanced Buddha Interaction
+        function blessBuddha() {
+            const buddha = document.querySelector('.buddha-image');
+            buddha.style.transform = 'scale(1.1)';
+            buddha.style.filter = 'brightness(1.3) contrast(1.2)';
+            
+            addMerit(10);
+            activateSoundWaves(1500);
+            
+            setTimeout(() => {
+                buddha.style.transform = 'scale(1)';
+                buddha.style.filter = 'brightness(1.1) contrast(1.1)';
+            }, 1000);
+            
+            const blessings = [
+                '🙏 Buddha blesses you with wisdom and compassion',
+                '✨ May the light of Buddha guide your path',
+                '🌸 Buddha\'s love surrounds you with peace',
+                '🕯️ The Buddha\'s wisdom illuminates your heart'
+            ];
+            
+            showNotification(blessings[Math.floor(Math.random() * blessings.length)]);
+        }
+
+        // Enhanced Offerings System
+        function makeOffering(offering, description) {
+            const offeringElement = event.target;
+            offeringElement.classList.add('offered');
+            
+            const meritValues = {
+                '🌸': 8, '🍎': 6, '🕯️': 10, '💧': 5, '🌾': 7, '🪷': 12
+            };
+            
+            addMerit(meritValues[offering] || 5);
+            activateSoundWaves(1200);
+            showNotification(`${offering} ${description} offered with devotion`);
+            
+            setTimeout(() => {
+                offeringElement.classList.remove('offered');
+            }, 3000);
+        }
+
+        // Enhanced Mala Counter
+        function initializeMala() {
+            const malaContainer = document.getElementById('mala-beads');
+            malaContainer.innerHTML = '';
+            
+            for (let i = 0; i < 108; i++) {
+                const bead = document.createElement('div');
+                bead.className = 'mala-bead';
+                bead.id = `bead-${i}`;
+                bead.title = `Bead ${i + 1}`;
+                bead.onclick = () => countToSpecificBead(i);
+                malaContainer.appendChild(bead);
+            }
+        }
+
+        function countPrayer() {
+            if (App.prayerCount < 108) {
+                const bead = document.getElementById(`bead-${App.prayerCount}`);
+                bead.classList.add('counted');
+                App.prayerCount++;
+                addMerit(2);
+                document.getElementById('prayer-count').textContent = App.prayerCount;
+                
+                activateSoundWaves(500);
+                
+                if (App.prayerCount === 108) {
+                    addMerit(100);
+                    showNotification('🙏 Full mala completed! Tremendous merit achieved! 🏆');
+                    celebrateMalaCompletion();
+                } else if (App.prayerCount % 27 === 0) {
+                    addMerit(20);
+                    showNotification(`🙏 ${App.prayerCount} prayers completed - Quarter mala achieved!`);
+                } else if (App.prayerCount % 10 === 0) {
+                    showNotification(`🙏 ${App.prayerCount} prayers completed - Building spiritual merit`);
+                }
+            }
+        }
+
+        function countToSpecificBead(index) {
+            if (index >= App.prayerCount) {
+                for (let i = App.prayerCount; i <= index; i++) {
+                    const bead = document.getElementById(`bead-${i}`);
+                    bead.classList.add('counted');
+                }
+                const prayers = index + 1 - App.prayerCount;
+                addMerit(prayers * 2);
+                App.prayerCount = index + 1;
+                document.getElementById('prayer-count').textContent = App.prayerCount;
+                showNotification(`🙏 ${prayers} prayers counted instantly`);
+            }
+        }
+
+        function resetMala() {
+            App.prayerCount = 0;
+            document.getElementById('prayer-count').textContent = '0';
+            for (let i = 0; i < 108; i++) {
+                const bead = document.getElementById(`bead-${i}`);
+                bead.classList.remove('counted');
+            }
+            showNotification('🔄 Mala reset - Beginning anew with fresh intentions');
+        }
+
+        function celebrateMalaCompletion() {
+            // Create celebration particles
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => createCelebrationParticle(), i * 100);
+            }
+            
+            // Light all candles
+            lightAllCandles();
+            
+            // Show special blessing
+            setTimeout(() => {
+                showNotification('🏆 Mala Master Achievement Unlocked! 🏆');
+            }, 2000);
+        }
+
+        function createCelebrationParticle() {
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                width: 15px;
+                height: 15px;
+                background: radial-gradient(circle, var(--primary-gold), var(--secondary-gold));
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 100;
+                animation: celebration-burst 3s ease-out forwards;
+            `;
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                if (particle.parentNode) particle.remove();
+            }, 3000);
+        }
+
+        // Enhanced Merit System
+        function addMerit(points) {
+            App.meritPoints += points;
+            updateMeritDisplay();
+        }
+
+        function updateMeritDisplay() {
+            document.getElementById('merit-points').textContent = App.meritPoints;
+            
+            let currentLevel = App.meritLevels[0];
+            let nextLevel = App.meritLevels[1];
+            
+            for (let i = 0; i < App.meritLevels.length; i++) {
+                if (App.meritPoints >= App.meritLevels[i].threshold) {
+                    currentLevel = App.meritLevels[i];
+                    nextLevel = App.meritLevels[i + 1] || App.meritLevels[i];
+                }
+            }
+            
+            if (App.meritLevel !== currentLevel.name) {
+                App.meritLevel = currentLevel.name;
+                document.getElementById('merit-level').textContent = App.meritLevel;
+                document.getElementById('next-level').textContent = nextLevel.name;
+                
+                // Level up celebration
+                showNotification(`🏆 Merit Level Up: ${App.meritLevel}! 🏆`);
+                activateSoundWaves(2000);
+                
+                // Special effects for level up
+                for (let i = 0; i < 10; i++) {
+                    setTimeout(() => createCelebrationParticle(), i * 150);
+                }
+            }
+            
+            // Calculate progress percentage
+            const currentThreshold = currentLevel.threshold;
+            const nextThreshold = nextLevel.threshold;
+            const progress = nextThreshold > currentThreshold ? 
+                ((App.meritPoints - currentThreshold) / (nextThreshold - currentThreshold)) * 100 : 100;
+            
+            document.getElementById('merit-fill').style.width = Math.min(progress, 100) + '%';
+            document.getElementById('merit-fill').style.background = 
+                `linear-gradient(90deg, ${currentLevel.color}, var(--secondary-gold))`;
+        }
+
+        // Enhanced Meditation Features
+        function startMeditation() {
+            if (!App.isMediating) {
+                App.isMediating = true;
+                const btn = event.target;
+                btn.textContent = '🧘‍♀️ Meditating... (Click to stop)';
+                btn.style.background = 'linear-gradient(135deg, #a8e6cf 0%, #dcedc8 50%, #f8bbd9 100%)';
+                
+                toggleMeditationMode(true);
+                startBreathingExercise();
+                addMerit(5);
+                activateSoundWaves(3000);
+                
+                showNotification('🧘‍♀️ Meditation session began - Finding inner peace');
+                
+                App.meditationTimer = setTimeout(() => {
+                    stopMeditation();
+                    showNotification('🙏 Meditation complete. Deep peace achieved.');
+                    addMerit(25);
+                }, 300000); // 5 minutes
+            } else {
+                stopMeditation();
+            }
+        }
+
+        function stopMeditation() {
+            if (App.meditationTimer) {
+                clearTimeout(App.meditationTimer);
+                App.meditationTimer = null;
+            }
+            
+            App.isMediating = false;
+            const btn = event.target;
+            btn.textContent = '🧘‍♀️ Begin Meditation';
+            btn.style.background = 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 30%, #ffd6cc 70%, #ff9a9e 100%)';
+            
+            toggleMeditationMode(false);
+            stopBreathingExercise();
+            showNotification('🧘‍♀️ Meditation session ended - Carrying peace within');
+        }
+
+        function toggleMeditationMode(force) {
+            App.meditationMode = force !== undefined ? force : !App.meditationMode;
+            
+            if (App.meditationMode) {
+                document.body.classList.add('meditation-mode');
+                showNotification('🌙 Meditation mode activated - Peaceful environment set');
+            } else {
+                document.body.classList.remove('meditation-mode');
+                showNotification('🌅 Normal mode restored - Returning to activity');
+            }
+        }
+
+        // Enhanced Breathing Exercise
+        function startBreathingExercise() {
+            const guide = document.getElementById('breathing-guide');
+            
+            if (!App.breathingActive) {
+                App.breathingActive = true;
+                guide.classList.add('active');
+                addMerit(8);
+                showNotification('🫁 Breathing guide started - Follow the gentle rhythm');
+                
+                App.breathingTimer = setTimeout(() => {
+                    stopBreathingExercise();
+                }, 120000); // 2 minutes
+            } else {
+                stopBreathingExercise();
+            }
+        }
+
+        function stopBreathingExercise() {
+            App.breathingActive = false;
+            const guide = document.getElementById('breathing-guide');
+            guide.classList.remove('active');
+            
+            if (App.breathingTimer) {
+                clearTimeout(App.breathingTimer);
+                App.breathingTimer = null;
+            }
+            
+            if (!App.isMediating) {
+                showNotification('🫁 Breathing exercise complete - Inner calm achieved');
+            }
+        }
+
+        // Enhanced Weather Effects
+        function toggleWeather() {
+            const weatherEffect = document.getElementById('weather-effect');
+            
+            if (!App.weatherActive) {
+                App.weatherActive = true;
+                startRain();
+                addMerit(5);
+                showNotification('🌧️ Gentle rain meditation - Cleansing the spirit');
+            } else {
+                App.weatherActive = false;
+                weatherEffect.innerHTML = '';
+                showNotification('🌧️ Rain stopped - Clarity and freshness remain');
+            }
+        }
+
+        function startRain() {
+            const weatherEffect = document.getElementById('weather-effect');
+            
+            function createRaindrop() {
+                if (!App.weatherActive) return;
+                
+                const drop = document.createElement('div');
+                drop.className = 'raindrop';
+                drop.style.left = Math.random() * 100 + 'vw';
+                drop.style.animationDuration = (Math.random() * 0.8 + 0.7) + 's';
+                drop.style.opacity = Math.random() * 0.7 + 0.3;
+                weatherEffect.appendChild(drop);
+                
+                setTimeout(() => {
+                    if (drop.parentNode) drop.remove();
+                }, 1500);
+                
+                if (App.weatherActive) {
+                    setTimeout(createRaindrop, Math.random() * 80 + 40);
+                }
+            }
+            
+            createRaindrop();
+        }
+
+        // Enhanced Interactive Elements
+        function spinDharmaWheel() {
+            const wheel = document.querySelector('.dharma-wheel');
+            wheel.classList.add('spinning');
+            addMerit(8);
+            activateSoundWaves(1500);
+            showNotification('☸️ Dharma Wheel turns - Wisdom teachings spread throughout the universe');
+            
+            setTimeout(() => {
+                wheel.classList.remove('spinning');
+            }, 4000);
+        }
+
+        function activateMandala() {
+            addMerit(15);
+            activateSoundWaves(2000);
+            showNotification('🌀 Sacred Mandala activated - Cosmic harmony and balance achieved');
+            
+            // Create mandala energy burst
+            for (let i = 0; i < 12; i++) {
+                setTimeout(() => createMandalaParticle(), i * 150);
+            }
+        }
+
+        function createMandalaParticle() {
+            const particle = document.createElement('div');
+            const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD'];
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            
+            particle.style.cssText = `
+                position: fixed;
+                top: 50%;
+                right: 120px;
+                width: 12px;
+                height: 12px;
+                background: radial-gradient(circle, ${color}, transparent);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: 100;
+                animation: mandala-burst 3s ease-out forwards;
+            `;
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                if (particle.parentNode) particle.remove();
+            }, 3000);
+        }
+
+        // Enhanced Sound System
+        function activateSoundWaves(duration = 1000) {
+            const soundWaves = document.getElementById('sound-waves');
+            soundWaves.classList.add('active');
+            
+            setTimeout(() => {
+                soundWaves.classList.remove('active');
+            }, duration);
+        }
+
+        function playBell() {
+            const buddha = document.querySelector('.buddha-image');
+            buddha.style.transform = 'scale(1.15)';
+            buddha.style.boxShadow = '0 0 60px rgba(255, 215, 0, 0.9), 0 0 120px rgba(255, 215, 0, 0.6)';
+            
+            addMerit(5);
+            activateSoundWaves(2000);
+            
+            setTimeout(() => {
+                buddha.style.transform = 'scale(1)';
+                buddha.style.boxShadow = '0 0 40px var(--border-glow), 0 0 80px rgba(255, 215, 0, 0.3), 0 0 120px rgba(255, 215, 0, 0.1)';
+            }, 800);
+            
+            showNotification('🔔 Sacred bell rings - Awakening mindfulness and presence');
+        }
+
+        function playOmChant() {
+            addMerit(10);
+            activateSoundWaves(3000);
+            
+            // Visual Om effect
+            const omEffect = document.createElement('div');
+            omEffect.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 6rem;
+                color: rgba(255, 215, 0, 0.8);
+                pointer-events: none;
+                z-index: 100;
+                animation: om-chant 3s ease-out forwards;
+                text-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+            `;
+            omEffect.textContent = 'ॐ';
+            document.body.appendChild(omEffect);
+            
+            setTimeout(() => {
+                if (omEffect.parentNode) omEffect.remove();
+            }, 3000);
+            
+            showNotification('🕉️ Om chanted - Universal vibration resonates through all existence');
+        }
+
+        function showBlessing() {
+            const blessings = [
+                '🙏 May peace and happiness fill your heart',
+                '✨ May wisdom light your path forward',
+                '🌸 May compassion flow through all your actions',
+                '🕯️ May inner strength guide you through challenges',
+                '🌿 May you find freedom from all suffering',
+                '🪷 May your spirit bloom like a sacred lotus',
+                '☸️ May the dharma bring you lasting joy',
+                '🌙 May serenity be your constant companion'
+            ];
+            
+            const blessing = blessings[Math.floor(Math.random() * blessings.length)];
+            addMerit(7);
+            activateSoundWaves(1500);
+            showNotification(blessing);
+        }
+
+        // Enhanced Notification System
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification.parentNode) notification.remove();
+            }, 4000);
+        }
+
+        // Continuous Particle Generation
+        setInterval(createParticle, 2500);
+
+        // Dynamic CSS Animations
+        const dynamicStyles = document.createElement('style');
+        dynamicStyles.textContent = `
+            @keyframes celebration-burst {
+                0% {
+                    transform: translate(0, 0) scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translate(${Math.random() * 600 - 300}px, ${Math.random() * 600 - 300}px) scale(0.2);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes mandala-burst {
+                0% {
+                    transform: translate(0, 0) scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translate(${Math.random() * 400 - 200}px, ${Math.random() * 400 - 200}px) scale(0);
+                    opacity: 0;
+                }
+            }
+            
+            @keyframes om-chant {
+                0% {
+                    transform: translate(-50%, -50%) scale(0.5);
+                    opacity: 1;
+                }
+                50% {
+                    transform: translate(-50%, -50%) scale(1.2);
+                    opacity: 0.8;
+                }
+                100% {
+                    transform: translate(-50%, -50%) scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(dynamicStyles);
+
+        // Initialize Application
+        document.addEventListener('DOMContentLoaded', init);
+
+        // Prevent context menu on long press (mobile)
+        document.addEventListener('contextmenu', e => e.preventDefault());
+    </script>
+</body>
+</html>
