@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sacred Buddha Prayer - Enhanced Meditation Experience</title>
+    <title>Sacred Buddha Prayer -  Meditation Experience</title>
     <style>
         * {
             margin: 0;
@@ -738,42 +738,6 @@
             .candles-container {
                 gap: 20px;
             }
-            
-            .fullscreen-controls {
-                top: 10px;
-                right: 10px;
-            }
-            
-            .fullscreen-btn {
-                width: 45px;
-                height: 45px;
-                font-size: 1.3rem;
-            }
-        }
-
-        @media (max-height: 600px) {
-            .container {
-                padding: 0.5rem;
-            }
-            
-            .title {
-                font-size: 1.8rem;
-                margin-bottom: 1rem;
-            }
-            
-            .buddha-image {
-                width: 200px;
-                height: 200px;
-            }
-            
-            .meditation-controls {
-                gap: 8px;
-            }
-            
-            .btn {
-                padding: 10px 15px;
-                font-size: 0.85rem;
-            }
         }
 
         /* Meditation Mode */
@@ -916,105 +880,6 @@
             0%, 100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
             50% { transform: translate(-50%, -50%) scale(1.2) rotate(180deg); }
         }
-
-        /* Fullscreen Controls */
-        .fullscreen-controls {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1001;
-        }
-
-        .fullscreen-btn {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 215, 0, 0.1));
-            backdrop-filter: blur(20px);
-            border: 2px solid rgba(255, 215, 0, 0.3);
-            border-radius: 15px;
-            color: #fff;
-            font-size: 1.5rem;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        .fullscreen-btn:hover {
-            transform: scale(1.1);
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 215, 0, 0.2));
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        }
-
-        .fullscreen-btn:active {
-            transform: scale(0.95);
-        }
-
-        /* Fullscreen mode adjustments */
-        :fullscreen {
-            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--light-blue) 30%, #667eea 60%, var(--purple) 100%);
-        }
-
-        :-webkit-full-screen {
-            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--light-blue) 30%, #667eea 60%, var(--purple) 100%);
-        }
-
-        :-moz-full-screen {
-            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--light-blue) 30%, #667eea 60%, var(--purple) 100%);
-        }
-
-        :-ms-fullscreen {
-            background: linear-gradient(135deg, var(--deep-blue) 0%, var(--light-blue) 30%, #667eea 60%, var(--purple) 100%);
-        }
-
-        /* Fullscreen enhancements */
-        :fullscreen .container {
-            max-width: 95vw;
-            padding: 1.5rem;
-        }
-
-        :fullscreen .title {
-            font-size: clamp(2.5rem, 6vw, 4rem);
-            margin-bottom: 2rem;
-        }
-
-        :fullscreen .buddha-image {
-            width: clamp(300px, 45vw, 400px);
-            height: clamp(300px, 45vw, 400px);
-        }
-
-        /* Hide scrollbars in fullscreen */
-        :fullscreen {
-            overflow: hidden;
-        }
-
-        :fullscreen body {
-            overflow-y: auto;
-            overflow-x: hidden;
-        }
-
-        /* Fullscreen notification */
-        .fullscreen-info {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            z-index: 1002;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-
-        .fullscreen-info.show {
-            opacity: 1;
-        }
     </style>
 </head>
 <body>
@@ -1067,13 +932,6 @@
         <div style="font-size: 0.8rem; opacity: 0.8; margin-top: 0.3rem;">
             Next: <span id="next-level">Devoted</span>
         </div>
-    </div>
-
-    <!-- Fullscreen Controls -->
-    <div class="fullscreen-controls">
-        <button class="fullscreen-btn" id="fullscreen-btn" onclick="toggleFullscreen()" title="Toggle Fullscreen">
-            <span id="fullscreen-icon">⛶</span>
-        </button>
     </div>
 
     <div class="container">
@@ -1155,13 +1013,7 @@
             <button class="btn" onclick="toggleWeather()">🌧️ Rain Meditation</button>
             <button class="btn" onclick="toggleMeditationMode()">🌙 Meditation Mode</button>
             <button class="btn" onclick="playOmChant()">🕉️ Om Chanting</button>
-            <button class="btn" onclick="toggleFullscreen()">🖥️ Toggle Fullscreen</button>
         </div>
-    </div>
-
-    <!-- Fullscreen Info -->
-    <div class="fullscreen-info" id="fullscreen-info">
-        Press ESC or click the ⛶ button to exit fullscreen • Press SPACE to count prayers
     </div>
 
     <script>
@@ -1176,7 +1028,6 @@
             weatherActive: false,
             meditationMode: false,
             soundsActive: false,
-            isFullscreen: false,
             
             // Merit levels with enhanced progression
             meritLevels: [
@@ -1210,12 +1061,10 @@
             initializeMala();
             createInitialParticles();
             updateMeritDisplay();
-            setupFullscreenListeners();
             
             setTimeout(() => {
                 hideLoading();
                 showWelcomeMessage();
-                enterFullscreen(); // Enter fullscreen by default
             }, 2000);
         }
 
@@ -1230,141 +1079,6 @@
         function showWelcomeMessage() {
             showNotification('🙏 Welcome to Sacred Buddha Prayer - May peace be with you');
         }
-
-        // Fullscreen Management
-        function setupFullscreenListeners() {
-            document.addEventListener('fullscreenchange', handleFullscreenChange);
-            document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
-            document.addEventListener('mozfullscreenchange', handleFullscreenChange);
-            document.addEventListener('MSFullscreenChange', handleFullscreenChange);
-        }
-
-        function handleFullscreenChange() {
-            const isFullscreen = !!(document.fullscreenElement || 
-                                   document.webkitFullscreenElement || 
-                                   document.mozFullScreenElement || 
-                                   document.msFullscreenElement);
-            
-            App.isFullscreen = isFullscreen;
-            updateFullscreenButton();
-            
-            const fullscreenInfo = document.getElementById('fullscreen-info');
-            
-            if (isFullscreen) {
-                showNotification('🖥️ Fullscreen mode activated - Immersive meditation experience');
-                addMerit(3);
-                
-                // Show fullscreen info temporarily
-                setTimeout(() => {
-                    fullscreenInfo.classList.add('show');
-                    setTimeout(() => {
-                        fullscreenInfo.classList.remove('show');
-                    }, 4000);
-                }, 1000);
-            } else {
-                showNotification('🪟 Fullscreen mode deactivated - Window mode restored');
-                fullscreenInfo.classList.remove('show');
-            }
-        }
-
-        function updateFullscreenButton() {
-            const icon = document.getElementById('fullscreen-icon');
-            const btn = document.getElementById('fullscreen-btn');
-            
-            if (App.isFullscreen) {
-                icon.textContent = '⛶'; // Exit fullscreen icon
-                btn.title = 'Exit Fullscreen (ESC)';
-            } else {
-                icon.textContent = '⛶'; // Enter fullscreen icon
-                btn.title = 'Enter Fullscreen';
-            }
-        }
-
-        function enterFullscreen() {
-            const element = document.documentElement;
-            
-            // Check if already in fullscreen
-            if (App.isFullscreen) {
-                return;
-            }
-            
-            try {
-                if (element.requestFullscreen) {
-                    element.requestFullscreen().catch(err => {
-                        console.log('Fullscreen request failed:', err);
-                        if (err.name === 'NotAllowedError') {
-                            showNotification('⚠️ Please click anywhere to enable fullscreen mode');
-                            // Add one-time click handler for user gesture
-                            const handleClick = () => {
-                                enterFullscreen();
-                                document.removeEventListener('click', handleClick);
-                            };
-                            document.addEventListener('click', handleClick);
-                        } else {
-                            showNotification('⚠️ Fullscreen not supported or blocked by browser');
-                        }
-                    });
-                } else if (element.webkitRequestFullscreen) {
-                    element.webkitRequestFullscreen();
-                } else if (element.mozRequestFullScreen) {
-                    element.mozRequestFullScreen();
-                } else if (element.msRequestFullscreen) {
-                    element.msRequestFullscreen();
-                } else {
-                    showNotification('⚠️ Fullscreen not supported in this browser');
-                }
-            } catch (err) {
-                console.log('Fullscreen error:', err);
-                showNotification('⚠️ Unable to enter fullscreen mode');
-            }
-        }
-
-        function exitFullscreen() {
-            try {
-                if (document.exitFullscreen) {
-                    document.exitFullscreen().catch(err => {
-                        console.log('Exit fullscreen failed:', err);
-                    });
-                } else if (document.webkitExitFullscreen) {
-                    document.webkitExitFullscreen();
-                } else if (document.mozCancelFullScreen) {
-                    document.mozCancelFullScreen();
-                } else if (document.msExitFullscreen) {
-                    document.msExitFullscreen();
-                }
-            } catch (err) {
-                console.log('Exit fullscreen error:', err);
-            }
-        }
-
-        function toggleFullscreen() {
-            if (App.isFullscreen) {
-                exitFullscreen();
-            } else {
-                enterFullscreen();
-            }
-        }
-
-        // Keyboard shortcuts
-        function handleKeyboard(event) {
-            // ESC key to exit fullscreen
-            if (event.key === 'Escape' && App.isFullscreen) {
-                exitFullscreen();
-            }
-            // F11 key to toggle fullscreen
-            if (event.key === 'F11') {
-                event.preventDefault();
-                toggleFullscreen();
-            }
-            // Space bar to count prayer
-            if (event.key === ' ' && !event.target.matches('button, input, textarea')) {
-                event.preventDefault();
-                countPrayer();
-            }
-        }
-
-        // Add keyboard event listener
-        document.addEventListener('keydown', handleKeyboard);
 
         // Enhanced Particle System
         function createParticle() {
